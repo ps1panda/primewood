@@ -120,6 +120,19 @@ section {
   }
 }
 
+.mainMenu_logo {
+  width: 17.5rem;
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+}
+
+@media (max-width: 1024px) {
+  .mainMenu_logo .logo_dop {
+    display: none;
+  }
+}
+
 .mainMenu_nav {
   display: flex;
   flex-direction: row;
@@ -163,6 +176,12 @@ section {
 
 @media (max-width: 768px) {
   .mainMenu_dop .phone {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainMenu_dop .mobile {
     display: none;
   }
 }
@@ -471,6 +490,23 @@ section {
   box-sizing: border-box;
 }
 
+@media (max-width: 360px) {
+  .footer_title {
+    width: 100%;
+    position: relative;
+  }
+  .footer_title:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    background: url(./img/plus.png) no-repeat center/cover;
+    transform: translate(0, -8px);
+  }
+}
+
 .footer .twocolumn {
   column-count: 2;
 }
@@ -478,6 +514,12 @@ section {
 @media (max-width: 1024px) {
   .footer .twocolumn {
     column-count: 3;
+  }
+}
+
+@media (max-width: 360px) {
+  .footer .twocolumn {
+    column-count: 1;
   }
 }
 
@@ -504,10 +546,25 @@ section {
   margin-bottom: 2rem;
 }
 
+@media (max-width: 360px) {
+  .footer_bottom {
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+  }
+}
+
 .footer_copyright {
   font-weight: 400;
   font-size: .875rem;
   line-height: 1.25rem;
+}
+
+@media (max-width: 360px) {
+  .footer_copyright {
+    order: 2;
+    margin-bottom: 2rem;
+  }
 }
 
 .footer_policity {
@@ -538,6 +595,12 @@ section {
 @media (max-width: 1024px) {
   .footer_box__links {
     column-count: 3;
+  }
+}
+
+@media (max-width: 360px) {
+  .footer_box__links {
+    column-count: 1;
   }
 }
 
@@ -590,6 +653,12 @@ section {
   }
 }
 
+@media (max-width: 360px) {
+  .footer_int {
+    grid-template-columns: 1fr;
+  }
+}
+
 .footer .social_link {
   gap: .75rem;
   display: flex;
@@ -600,6 +669,12 @@ section {
 
 .footer .social_link a {
   padding-left: 0px !important;
+}
+
+@media (max-width: 360px) {
+  .footer_rating {
+    margin-bottom: 2rem;
+  }
 }
 
 .footer_rating__number {
